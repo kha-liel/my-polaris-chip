@@ -27,15 +27,24 @@ export class MyCard extends LitElement {
       :host {
         display: block;
       }
+
+      .cityLandmarkCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
       
       .card-container {
-        max-width: 400px;
+        width: 400px;
         border: var(--my-card-border-color, black);
         border-radius: 12px;
         background-color: var(--my-card-bg-color, white);
         margin: 20px auto;
         overflow: hidden;
         font-family: 'Segoe UI';
+        flex: 0 1 400px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       }
 

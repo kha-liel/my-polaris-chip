@@ -25,6 +25,13 @@
       --my-card-paragraph-font-color: black;
     }
 
+    .cityLandmarkCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
 
   </style>
   <title>polaris-chip / my-card</title>
@@ -39,6 +46,7 @@
   <polaris-chip title="Grants and donations"></polaris-chip>
   <span>Just a span for comparison</span>
   <h1>my-cards</h1>
+<div class="cityLandmarkCards">
   <my-card
     title = "The Bean"
     alt = "Photo of the Bean"
@@ -68,7 +76,7 @@
       <span style="color:darkgreen"><b>torch</b></span> lights the way to freedom, the <span style="color:darkgreen"><b>crown's spikes</b></span> represent the seven seas and 
       continents, and the <span style="color:darkgreen"><b>broken chains</b></span> at her feet signify the end of slavery and moving past unfair control.
     </p>
-</my-card>
+  </my-card>
   <my-card
     title = "Golden Gate Bridge"
     alt = "Photo of the Golden Gate Bridge"
@@ -103,14 +111,20 @@
   <my-card
     title = "Space Needle"
     alt = "Photo of the Space Needle"
-    image = ""
-    buttonLink = ""
-    style = ""
+    image = "https://res.cloudinary.com/see-sight-tours/image/upload/v1713358481/strapi/space_needle_seattle_1b6bd212d3.jpg"
+    buttonLink = "https://en.wikipedia.org/wiki/Space_Needle"
+    style = "--my-card-title-font-color: indigo;
+            --my-card-bg-color: lavender;
+            --my-card-details-button-color: indigo;"
     >
     <p>
-
+      This is the <span style="color:indigo"><b>Space Needle</b></span>, located at the Seattle Center in Seattle, Washington. It was created by hotel executive Edward Carlson and architect 
+      John Graham Jr. as the centerpiece for the 1962 World's Fair to show off America's goals for the <span style="color:indigo"><i>Space Age</i></span>. Its visual aspects are meant to look 
+      futuristic and thin: the <span style="color:indigo"><b>top house</b></span> is shaped like a flying saucer to represent space travel, while its <span style="color:indigo"><b>wasp-waisted legs</b></span> 
+      were inspired by an abstract sculpture of a dancer to give it a graceful and modern look.
     </p>
   </my-card>
+</div>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
