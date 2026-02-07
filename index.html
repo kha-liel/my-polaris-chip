@@ -19,6 +19,13 @@
     polaris-chip {
       margin: 16px;
     }
+
+    my-card {
+      --my-card-title-font-color: black;
+      --my-card-paragraph-font-color: black;
+    }
+
+
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -30,9 +37,80 @@
   <polaris-chip title="Faculty and Staff"></polaris-chip>
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
+  <span>Just a span for comparison</span>
+  <h1>my-cards</h1>
+  <my-card
+    title = "The Bean"
+    alt = "Photo of the Bean"
+    image = "https://abc3340.com/resources/media/90a59e0a-8ad6-4201-9a9c-0c4c268ca905-jumbo16x9_ScreenShot20240624at2.39.40PM.png"
+    buttonLink = "https://en.wikipedia.org/wiki/Cloud_Gate"
+    style = "--my-card-title-font-color: navy;
+            --my-card-bg-color: #e2e8f7;"
+    >
+    <p>
+      This is <span style="color:navy"><b>Cloud Gate</b></span>, officially known as <span style="color:navy"><i>The Bean</i></span>, located at the AT&T Plaza in Millenium Park, downtown 
+      Chicago. It was created by Anish Kapoor for a highly reflective, interactive, and monumental sculpture that engages with the city's skyline, sky, and lake. Its visual aspect, ispired by 
+      liquid mercury, is to distort and blend the surrounding urban environment to make viewers a part of the artwork.
+    </p>
+  </my-card>
+  <my-card
+    title = "The Statue of Liberty"
+    alt = "Photo of the Statue of Liberty"
+    image = "https://assets.cityexperiences.com/wp-content/uploads/2024/07/TAT_5385-1-1024x684.jpg"
+    buttonLink = "https://en.wikipedia.org/wiki/Statue_of_Liberty"
+    style = "--my-card-title-font-color: darkgreen;
+            --my-card-bg-color: #f4ffeb;
+            --my-card-details-button-color: darkgreen;"
+    >
+    <p>
+      This is the <span style="color:darkgreen"><b>Statue of Liberty</b></span> located on Liberty Island in New York Harbour. It was created by sculptor Frédéric Auguste Bartholdi 
+      and engineer Gustave Eiffel as a gift from France to celebrate American independence and the shared goal of liberty. Its visual aspects are full of meaning: the 
+      <span style="color:darkgreen"><b>torch</b></span> lights the way to freedom, the <span style="color:darkgreen"><b>crown's spikes</b></span> represent the seven seas and 
+      continents, and the <span style="color:darkgreen"><b>broken chains</b></span> at her feet signify the end of slavery and moving past unfair control.
+    </p>
+</my-card>
+  <my-card
+    title = "Golden Gate Bridge"
+    alt = "Photo of the Golden Gate Bridge"
+    image = "https://cdn.sanity.io/images/nxpteyfv/goguides/3b286a72121cc8ed3e171361b645653c59f98cf5-1600x1066.jpg"
+    buttonLink = "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+    style = "--my-card-title-font-color: chocolate;
+            --my-card-bg-color: #ffead5;
+            --my-card-details-button-color: chocolate;"
+    >
+    <p>
+      This is the <span style="color:chocolate"><b>Golden Gate Bridge</b></span>, which connects San Francisco and Martin County in California. It was created by engineer Joseph Strauss, 
+      designer Charles Ellis, and architect Irving Morrow to provide a much-needed travel an dtrade across the water. Its visual aspects were designed with both beauty and safety in mind: 
+      the famous <span style="color:chocolate"><b>International Orange</b></span> color was chosed to help the bridge stand out in thick fog and its 
+      <span style="color:chocolate"><b>Art Deco</b></span> style, seen in the tail towers and straight lines, was meant to make it look like a modern work of art.
+    </p>
+  </my-card>
+  <my-card
+    title = "Gateway Arch"
+    alt = "Photo of the Gateway Arch"
+    image = "https://th-thumbnailer.cdn-si-edu.com/ugSndM6_Fp6GBuhVrv0TelqYOKM=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/ee/29/ee29f55b-813b-4043-a25e-cf7eb8d158fb/gateway-arch.jpg"
+    buttonLink = "https://en.wikipedia.org/wiki/Gateway_Arch"
+    style = "--my-card-title-font-color: goldenrod;
+            --my-card-bg-color: lightyellow;
+            --my-card-details-button-color: goldenrod;"
+    >
+    <p>
+      This is the <span style="color:goldenrod"><b>Gateway Arch</b></span>, located in St. Louis, Missouri, along the Mississippi River. It was created by architect Eero Saarinen and 
+      engineer Hann Frederich to serve as a monument to the westward growth of the United States. Its visual aspect, a tall and sleek stainless steel curve, is meant to act as a 
+    <span style="color:goldenrod"><i>Gateway to the West</i></span>, while its unique weighted arch shape symbolizes strength and the bold spirit of people moving toward a new frontier.
+    </p>
+  </my-card>
+  <my-card
+    title = "Space Needle"
+    alt = "Photo of the Space Needle"
+    image = ""
+    buttonLink = ""
+    style = ""
+    >
+    <p>
 
-  <h1>my-card</h1>
-  <my-card></my-card>
+    </p>
+  </my-card>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
