@@ -19,21 +19,12 @@ export class MyCard extends LitElement {
     this.alt = "Alternative photo text";
     this.image = "https://picsum.photos/200"
     this.buttonLink = "https://hax.psu.edu";
-    this.buttonName = "Details";
   }
 
   static get styles() {
     return css`
       :host {
         display: block;
-      }
-
-      .cityLandmarkCards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
       }
       
       .card-container {
@@ -44,7 +35,6 @@ export class MyCard extends LitElement {
         margin: 20px auto;
         overflow: hidden;
         font-family: 'Segoe UI';
-        flex: 0 1 400px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       }
 
