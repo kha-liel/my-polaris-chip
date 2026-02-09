@@ -19,6 +19,7 @@ export class MyCard extends LitElement {
     this.alt = "Alternative photo text";
     this.image = "https://picsum.photos/200"
     this.buttonLink = "https://hax.psu.edu";
+    this.buttonLabel = "Details";
   }
 
   static get styles() {
@@ -104,9 +105,9 @@ export class MyCard extends LitElement {
         <div class="card-content">
           <h2 class="heading">${this.title}</h2>
           <p class="description"><slot></slot></p>
-          <a href="${this.buttonLink}" class="details-btn" target = _blank>Details</a>
+          <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
         </div>
-    </div>
+     </div>
   `;
   }
 
@@ -115,7 +116,8 @@ export class MyCard extends LitElement {
       title: { type: String },
       image: { type: String },
       alt: { type: String },
-      buttonLink: { type: String }
+      buttonLink: { type: String },
+      buttonLabel: { type: String}
     };
   }
 }
