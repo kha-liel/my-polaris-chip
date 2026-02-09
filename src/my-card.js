@@ -116,8 +116,9 @@ export class MyCard extends LitElement {
       title: { type: String },
       image: { type: String },
       alt: { type: String },
+      fancy: { type: Boolean, reflect: true},
       buttonLink: { type: String },
-      buttonLabel: { type: String}
+      buttonLabel: { type: String }
     };
   }
 }
