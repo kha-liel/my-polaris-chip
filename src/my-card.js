@@ -20,12 +20,17 @@ export class MyCard extends LitElement {
     this.image = "https://picsum.photos/200"
     this.buttonLink = "https://hax.psu.edu";
     this.buttonLabel = "Details";
+    this.fancy = false;
   }
 
   static get styles() {
     return css`
       :host {
         display: block;
+      }
+
+      :host([fancy]) .card-container {
+        border-color: var(--my-card-fancy-border-color, grey);
       }
       
       .card-container {
@@ -57,9 +62,14 @@ export class MyCard extends LitElement {
         color: var(--my-card-title-font-color, black);
       }
 
+      .scroll-container {
+        max-height: 240px;
+        overflow-y: auto;
+      }
+
       .description {
-        text-align: center;
-        margin-bottom: 16px;
+        text-align: justify;
+        margin: 16px 0px;
         color: var(--my-card-paragraph-font-color, black);
         line-height: 1.6;
       }
@@ -104,8 +114,10 @@ export class MyCard extends LitElement {
         <img alt="${this.alt}" src="${this.image}">
         <div class="card-content">
           <h2 class="heading">${this.title}</h2>
-          <p class="description"><slot></slot></p>
-          <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
+          <div class="scroll-container">
+            <p class="description"><slot></slot></p>
+            <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
+          </div>
         </div>
      </div>
   `;
