@@ -63,7 +63,7 @@ export class MyCard extends LitElement {
       }
 
       .scroll-container {
-        max-height: 240px;
+        max-height: 250px;
         overflow-y: auto;
       }
 
@@ -113,8 +113,8 @@ export class MyCard extends LitElement {
       <div class="card-container">
         <img alt="${this.alt}" src="${this.image}">
         <div class="card-content">
-          <h2 class="heading">${this.title}</h2>
-          <div class="scroll-container">
+        <div class="scroll-container">
+            <h2 class="heading">${this.title}</h2>
             <p class="description"><slot></slot></p>
             <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
           </div>
