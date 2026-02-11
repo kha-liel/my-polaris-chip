@@ -17,7 +17,8 @@ export class MyCard extends LitElement {
     super();
     this.title = "Popular U.S. City Landmarks";
     this.alt = "Alternative photo text";
-    this.image = "https://picsum.photos/200"
+    this.image = "https://picsum.photos/200";
+    this.description = "Information about Popular City Landmark";
     this.buttonLink = "https://hax.psu.edu";
     this.buttonLabel = "Details";
     this.fancy = false;
@@ -115,7 +116,14 @@ export class MyCard extends LitElement {
         <div class="card-content">
         <div class="scroll-container">
             <h2 class="heading">${this.title}</h2>
-            <p class="description"><slot></slot></p>
+            <p class="description">
+            <details ?open="${this.fancy}">
+              <summary>Description</summary>
+              <div>
+                <slot>${this.description}</slot>
+              </div>
+            </details>
+            </p>
             <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
           </div>
         </div>
@@ -127,6 +135,7 @@ export class MyCard extends LitElement {
     return {
       title: { type: String },
       image: { type: String },
+      description: { type: String },
       alt: { type: String },
       fancy: { type: Boolean, reflect: true},
       buttonLink: { type: String },
