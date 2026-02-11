@@ -147,10 +147,10 @@ openChanged(e) {
                 <summary>Description</summary>
                 <div>
                   <slot>${this.description}</slot>
+                  <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
                 </div>
             </p>
-              <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
-            </details>
+              </details>
           </div>
         </div>
      </div>
