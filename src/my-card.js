@@ -31,7 +31,7 @@ export class MyCard extends LitElement {
       }
 
       :host([fancy]) .card-container {
-        border-color: var(--my-card-fancy-border-color, grey);
+        border: var(--my-card-fancy-border, 2px solid grey);
       }
       
       .card-container {
@@ -70,6 +70,7 @@ export class MyCard extends LitElement {
 
       .description {
         text-align: justify;
+        max-height: 200px;
         margin: 16px 0px;
         color: var(--my-card-paragraph-font-color, black);
         line-height: 1.6;
@@ -83,6 +84,21 @@ export class MyCard extends LitElement {
         text-decoration: none;
         border-radius: 4px;
         text-align: center;
+      }
+
+      details summary {
+        text-align: justify;
+        font-size: 18px;
+      }
+
+      details[open] summary {
+        font-weight: bold;
+      }
+
+      details div {
+        height: 180px;
+        text-align: justify;
+        overflow-y: auto;
       }
 
 
@@ -109,22 +125,32 @@ export class MyCard extends LitElement {
     `;
   }
 
+openChanged(e) {
+  console.log(e);
+  if (e.target.getAttribute('open') !== null) {
+    this.fancy = true;
+  }
+  else {
+    this.fancy = false;
+  }
+}
+
   render() {
     return html`
       <div class="card-container">
         <img alt="${this.alt}" src="${this.image}">
         <div class="card-content">
-        <div class="scroll-container">
-            <h2 class="heading">${this.title}</h2>
+          <h2 class="heading">${this.title}</h2>
+          <div class="scroll-container">
             <p class="description">
-            <details ?open="${this.fancy}">
-              <summary>Description</summary>
-              <div>
-                <slot>${this.description}</slot>
-              </div>
-            </details>
+              <details ?open="${this.fancy}" @toggle="${this.openChanged}">
+                <summary>Description</summary>
+                <div>
+                  <slot>${this.description}</slot>
+                </div>
             </p>
-            <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
+              <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
+            </details>
           </div>
         </div>
      </div>
