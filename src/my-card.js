@@ -55,6 +55,7 @@ export class MyCard extends LitElement {
 
       .card-content {
         padding: 16px;
+        min-height: 0;
       }
 
       .heading {
@@ -85,7 +86,7 @@ export class MyCard extends LitElement {
         border-radius: 4px;
         text-align: center;
       }
-
+      
       details summary {
         text-align: justify;
         font-size: 18px;
@@ -98,7 +99,12 @@ export class MyCard extends LitElement {
       details div {
         height: 180px;
         text-align: justify;
-        overflow-y: auto;
+       // overflow-y: auto;
+      }
+
+      .dropdown-wrapper {
+        height: 250px;
+        overflow: hidden;
       }
 
 
@@ -143,14 +149,16 @@ openChanged(e) {
           <h2 class="heading">${this.title}</h2>
           <div class="scroll-container">
             <p class="description">
+            <div class="dropdown-wrapper"> 
               <details ?open="${this.fancy}" @toggle="${this.openChanged}">
-                <summary>Description</summary>
-                <div>
-                  <slot>${this.description}</slot>
-                  <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
-                </div>
-            </p>
+                  <summary>Description</summary>
+                  <div>
+                    <slot>${this.description}</slot>
+                  </div>
+              </p>
               </details>
+            </div>
+            <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
           </div>
         </div>
      </div>
