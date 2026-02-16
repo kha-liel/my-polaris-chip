@@ -100,14 +100,13 @@ export class MyCard extends LitElement {
       details div {
         height: 180px;
         text-align: justify;
-       // overflow-y: auto;
+        overflow-y: auto;
       }
 
-      /* here if i want the card to stay the same size regardless of the dropdown being opened
       .dropdown-wrapper {
         height: 250px;
         overflow: hidden;
-      }*/
+      }
 
 
       @media (max-width: 800px) and (min-width: 501px) {
@@ -151,8 +150,7 @@ openChanged(e) {
           <h2 class="heading">${this.title}</h2>
           <div class="scroll-container">
             <p class="description">
-            <!-- here for the dropdown formatting
-             <div class="dropdown-wrapper"> -->
+             <div class="dropdown-wrapper">
               <details ?open="${this.fancy}" @toggle="${this.openChanged}">
                   <summary>Description</summary>
                   <div>
@@ -160,8 +158,7 @@ openChanged(e) {
                   </div>
               </p>
               </details>
-            <!-- closes dropdown-wrapper
-            </div> -->
+            </div>
             <a href="${this.buttonLink}" class="details-btn" target = _blank>${this.buttonLabel}</a>
           </div>
         </div>
