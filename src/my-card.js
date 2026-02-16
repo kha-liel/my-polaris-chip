@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@haxtheweb/meme-maker/meme-maker.js";
 
 /**
  * Now it's your turn. Here's what we need to try and do:
@@ -75,7 +76,7 @@ export class MyCard extends LitElement {
         max-height: 200px;
         margin: 16px 0px;
         color: var(--my-card-paragraph-font-color, black);
-        line-height: 1.6;
+        line-height: 1.8;
       }
 
       .details-btn {
