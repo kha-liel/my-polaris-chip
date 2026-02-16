@@ -68,7 +68,7 @@ export class MyCard extends LitElement {
 
       .scroll-container {
         max-height: 250px;
-        overflow-y: auto;
+        // overflow-y: auto;
       }
 
       .description {
@@ -147,7 +147,13 @@ openChanged(e) {
   render() {
     return html`
       <div class="card-container">
-        <img alt="${this.alt}" src="${this.image}">
+        <!-- <img alt="${this.alt}" src="${this.image}"> -->
+        <meme-maker
+          alt="${this.alt}"
+          image-url="${this.image}"
+          bottom-text="HTML is anything"
+          top-text="${this.title}">
+        </meme-maker>
         <div class="card-content">
           <h2 class="heading">${this.title}</h2>
           <div class="scroll-container">
