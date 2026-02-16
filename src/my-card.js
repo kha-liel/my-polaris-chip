@@ -43,6 +43,7 @@ export class MyCard extends LitElement {
         overflow: hidden;
         font-family: 'Segoe UI';
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        font-size: 20px;
       }
 
       .card-container img {
@@ -90,7 +91,7 @@ export class MyCard extends LitElement {
       
       details summary {
         text-align: justify;
-        font-size: 18px;
+        font-size: 20px;
       }
 
       details[open] summary {
